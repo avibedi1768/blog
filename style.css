@@ -28,55 +28,7 @@ a:link, a:visited{
 }
 
 /* left bar */
-.left-sidebar {
-  position: sticky;
-  width: 20vw;
-  height: 100vh;
-  left: 0;
-  top: 0;
-  border-right: 0.1rem solid var(--background-grey);
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-}
-
-.links-flex {
-  display: flex;
-  align-items: flex-start;
-  margin: 0.5rem 1rem;
-  cursor: pointer;
-  width: 16rem;
-  flex-direction: column;
-}
-  
-.link-flex {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1rem;
-  padding: 0rem 1rem;
-  padding-right: 2rem;
-}
-
-.link-flex:hover {
-  background-color: var(--background-grey);
-  border-radius: 2rem;
-}
-
-.link-icon {
-  width: 1.8rem;
-  height: 1.8rem;
-}
-
-.link-text {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin: 1rem 0rem;
-}
-.myIcon{
-  color: #e7e9ea
-} 
-/* .left-sidebar{
+.left-sidebar{
     position: sticky;
     padding-top: 10px;
     width: 300px;
@@ -85,20 +37,27 @@ a:link, a:visited{
     top: 0;
     border-right: 0.1px solid #e7e9ea56;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-start;
 }
 .links-flex{
-    width: auto;
-    margin: 5px 10px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 16rem;
+    margin: 0.5rem 1rem;
 }
 .link-flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
     cursor: pointer;
     padding: 0 5px;
     transition-duration: 0.4s;
 }
 .link-flex:hover{
-    background-color: grey;
+    background-color: #212327;
     border-radius: 8px;
 }
 .link-icon{
@@ -112,7 +71,7 @@ a:link, a:visited{
 }
 .myIcon{
     color: #e7e9ea
-} */
+}
 /* middle */
 #inp{
     width: 500px;
@@ -163,6 +122,8 @@ button:hover{
 button:focus{
     border: none;
 }
+
+/* dynamic stuff */
 #compo, #show{
     color: #e7e9ea;
 }
