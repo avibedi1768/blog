@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>MyBlog</title>
+    <link rel="icon" type="image/x-icon" href="LAlogo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase.js"></script>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body onload="newLoader()">
+    <!-- left sidebar -->
+    <div class="left-sidebar">
+      <div class="links-flex">
+        <div class="link-flex" style="border-bottom: 0.1px solid #e7e7e7;">
+          <img src="LAlogo.jpg" style="width: 25px;">
+          <p class="link-text">MyBlog</p>
+        </div>
+        <div class="link-flex">
+          <i class="fas fa-home myIcon"></i>
+          <p class="link-text">Home</p>
+        </div>
+        <div class="link-flex">
+          <i class="fas fa-search myIcon"></i>
+          <p class="link-text">Search</p>
+        </div>
+        <div class="link-flex">
+          <i class="fas fa-envelope myIcon"></i>
+          <p class="link-text">Messages</p>
+        </div>
+        <div class="link-flex">
+          <i class="fas fa-bookmark myIcon"></i>
+          <p class="link-text">Saved</p>
+        </div>
+        <div class="link-flex">
+          <i class="fas fa-bell myIcon"></i>
+          <p class="link-text">Notifications</p>
+        </div>
+        <button class="btn" onclick="location.href='index.html';" style="margin-left: 45px;">Go Back</button>
+  
+      </div>
+      </div>
+
+  <section class="show"></section>
+  <script href="main.js"></script>
+</body>
+</html>
