@@ -59,6 +59,12 @@ function create(i){
     let content=document.getElementById("content").value
     let title=document.getElementById("title").value
 
+    // check for empty value
+    if(content=='' || title==''){
+        window.alert("Please enter some value!")
+        return
+    }
+
     // set title & content
     db.ref('blog/' + i).set({
         Title: title,
@@ -72,6 +78,7 @@ function create(i){
     db.ref("id").update(updates)
 
     window.alert("Added!")
+    location.reload()
 }
 function compo(t, c, i){
     var div=document.createElement('div');

@@ -31,6 +31,18 @@ a:link, a:visited{
     justify-content: flex-end;
     align-items: flex-start;
 }
+.right-sidebar{
+    top: 0;
+    right: 0;
+    position: fixed;
+    padding-top: 10px;
+    width: 300px;
+    height: 100%;
+    border-left: 0.1px solid #e7e9ea56;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
 .links-flex{
     display: flex;
     align-items: flex-start;
@@ -48,7 +60,7 @@ a:link, a:visited{
     transition-duration: 0.4s;
 }
 .link-flex:hover{
-    background-color: #212327;
+    background-color: #474b53;
     border-radius: 8px;
 }
 .link-icon{
@@ -65,7 +77,8 @@ a:link, a:visited{
 }
 /* middle */
 .middle-content, #show{
-    margin: 40px 340px;
+    margin-left:  340px;
+    padding: 10px 0;
     
 }
 #inp{
@@ -120,11 +133,14 @@ button:focus{
 /* dynamic stuff */
 #compo, #show{
     color: #e7e9ea;
+    width: 950px;
+    padding: 0 20px 20px 0;
 }
 #compo div, #show div{
     margin: 20px;
 }
 #compo h3, #show h3{
     margin-bottom: 5px;
+    padding-top: 15px;
 }
 
