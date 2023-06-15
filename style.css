@@ -163,13 +163,13 @@ button:hover{
 button:focus{
     border: none;
 }
-#compo{
+#compo, #show{
     color: #e7e9ea;
 }
-#compo div{
+#compo div, #show div{
     margin: 60px;
 }
-#compo h3{
+#compo h3, #show h3{
     margin-bottom: 5px;
 }
 

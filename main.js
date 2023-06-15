@@ -26,7 +26,7 @@ function loader(){
         load(i)
     })
     async function load(i){
-        for(let k=0; k<i; k++) {
+        for(let k=i-1; k>=0; k--) {
             await db.ref('blog/' + k).once('value', (value) => {
                 let t=value.val().Title
                 let c=value.val().Content
@@ -80,7 +80,7 @@ function compo(t, c, i){
     var button=document.createElement('button');
     div.id=i;
     h3.innerHTML='Title: ' + t;
-    p.innerHTML='Content: ' + c;
+    p.innerHTML='Content: ' + c.substring(0, 4) + '...';
     button.innerHTML='Read more...'
     button.onclick=function(){
         window.location.href='open.html?q=' + i
@@ -92,7 +92,33 @@ function compo(t, c, i){
 
 function newLoader(){
     console.log('hey')
-    let url=location.href
-    let blogNumber=url.split('=')[1]
+    // old way for query fetch
+    // let url=location.href
+    // let blogNumber=url.split('=')[1]
+
+    // new way of query fetch
+    const urlParams = new URLSearchParams(window.location.search);
+    const blogNumber = urlParams.get('q');
+
     console.log(blogNumber)
+    finalShow(blogNumber)
+}
+function finalShow(i){
+    db.ref('blog/' + i).once('value', (value) =>{
+        console.log(value.val())
+        let t=value.val().Title
+        let c=value.val().Content
+        console.log(t+' '+c+' '+i)     
+        last(t, c)
+    })
+}
+function last(t, c){
+    var div=document.createElement('div');
+        var h3=document.createElement('h3');
+        var p=document.createElement('p');
+        div.id=i;
+        h3.innerHTML='Title:'+ t;
+        p.innerHTML='Content:'+ c;
+        div.append(h3, p)
+        document.getElementById('show').appendChild(div)
 }
