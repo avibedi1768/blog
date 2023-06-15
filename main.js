@@ -80,7 +80,7 @@ function compo(t, c, i){
     var button=document.createElement('button');
     div.id=i;
     h3.innerHTML='Title: ' + t;
-    p.innerHTML='Content: ' + c.substring(0, 4) + '...';
+    p.innerHTML='Content: ' + c.substring(0, 200) + '...';
     button.innerHTML='Read more...'
     button.onclick=function(){
         window.location.href='open.html?q=' + i
